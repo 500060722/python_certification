@@ -1,20 +1,22 @@
 print('Hello Everyone! Welcome to "Variety retail store". Here is the \
 list of the items and there prices.')
-furniture=["Sofa Set","Dining Table","T.V. Stand","Cupboard"]
-cost=['20,000','8,500','4,599','13,920']
-qty=['12','0','13','10']
-for i in range(0,4,1):
-    print("Item:",furniture[i])
-    print("Cost:",cost[i])
-    print("Quantity:",qty[i])
-purchased_list=[]
-for i in (0,3,1):
-    item_name=input("Enter the item name you want to buy from the above shown list")
-    if item_name in furniture == True:
-        purchased_list.insert(i,item)
-        print("The following item is:\n",purchased_list)
-    else:
-        print("Item is not available!!!!")
-print("The following items:\n",purchased_list)
+furniture=["sofa set", "dining table", "T.V. stand", "cupboard"]
+cost=[20000, 8500, 4599, 13920]
+f=input("Enter the furniture you want to buy:")
+q=int(input("Enter quantity:"))
+c=-1
+flag=0
+for x in furniture:
+    c = c + 1
+    if(f==x):
+        flag = flag + 1
+        if(q>0):
+            bill = cost[c] * q
+            print("bill:",bill)
+        else:
+            print("Invalid quantity entered\nBill ammount:0")
+if(flag==0):
+    print("Furniture not available")
+
 
     
